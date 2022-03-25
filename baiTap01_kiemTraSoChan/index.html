@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiểm tra số chẵn</title>
+  </head>
+  <body>
+    <p>Nhập số vào đây:</p>
+    <input id="inputNum" type="number" size="30" />
+    <button onclick="check()">Nhập số</button>
+    <div id="result" style="margin-top: 10px"></div>
+    <script>
+      let inputNum = document.getElementById("inputNum");
+      let result = document.getElementById("result");
+      function check() {
+        let number = inputNum.value;
+        if (number % 2 == 0) {
+          result.innerText = "Đây là số chẵn";
+        } else {
+          result.innerText = "Không phải số chẵn";
+        }
+      }
+    </script>
+  </body>
+</html>

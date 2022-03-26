@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Cal</title>
+  </head>
+  <body>
+    <input type="number" id="firstNum" size="30" />
+    <input type="number" id="secondNum" size="30" />
+    <div style="margin-top: 10px">
+      <button id="Addbutt" onclick="add()">Addition(+)</button>
+      <button id="Subbutt" onclick="sub()">Subtraction(-)</button>
+      <button id="Mulbutt" onclick="mul()">Multiplication(x)</button>
+      <button id="Divbutt" onclick="div()">Division(/)</button>
+    </div>
+    <div id="result" style="margin: 10px"></div>
+    <script>
+      let firstNum = document.getElementById("firstNum");
+      let secondNum = document.getElementById("secondNum");
+      let result = document.getElementById("result");
+      function add() {
+        let firstNumber = parseInt(firstNum.value);
+        let secondNumber = parseInt(secondNum.value);
+        result.innerText = "kết quả là " + (firstNumber + secondNumber);
+      }
+      function sub() {
+        let firstNumber = parseInt(firstNum.value);
+        let secondNumber = parseInt(secondNum.value);
+        result.innerText = "kết quả là " + (firstNumber - secondNumber);
+      }
+      function mul() {
+        let firstNumber = parseInt(firstNum.value);
+        let secondNumber = parseInt(secondNum.value);
+        result.innerText = "kết quả là " + firstNumber * secondNumber;
+      }
+      function div() {
+        let firstNumber = parseInt(firstNum.value);
+        let secondNumber = parseInt(secondNum.value);
+        result.innerText = "kết quả là " + firstNumber / secondNumber;
+      }
+    </script>
+  </body>
+</html>
